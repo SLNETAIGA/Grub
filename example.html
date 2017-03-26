@@ -1,0 +1,16 @@
+<!-- Example of Grub.js -->
+<script src="Grub.js"></script>
+<font color="red" onmouseenter="select('text').attr('style','background-color: blue')" onmouseleave="select('text').attr('style','background-color: white')" id="text"></font><br>
+<button onclick='select("text").removeAttr("color")'>Remove red</button><br>
+<button onclick='select("text").attr("color","red")'>Set red</button><br>
+<button id="b" onclick='select("text").hide()'>Hide</button><br>
+<button onclick='select("text").show()'>Show</button><br>
+<button onclick='select("text").del()'>Delete</button><br>
+<script>
+select("b").makeEvent("click");
+select('text').html("text");
+document.write("Text: "+select('text').html()+"<br>");
+document.write("<h1>Grub.js info</h1>Desc: "+Grub.inf.desc+"<br>"+Grub.inf.copyright+"<br>Version: "+Grub.inf.ver);
+select('text').append(" text");
+select('text').preappend("text ");
+</script>
